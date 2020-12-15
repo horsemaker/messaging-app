@@ -1,11 +1,20 @@
+import firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDJTBcV8KfjHeNcR4aGbmbAe-vs8_Xpgn0",
-    authDomain: "messaging-app-983cb.firebaseapp.com",
-    databaseURL: "https://messaging-app-983cb.firebaseio.com",
-    projectId: "messaging-app-983cb",
-    storageBucket: "messaging-app-983cb.appspot.com",
-    messagingSenderId: "818447271259",
-    appId: "1:818447271259:web:ed8f6c11d082a65993067e",
-    measurementId: "G-00CBD0CTH8"
-  };
+  apiKey: "AIzaSyCrcJtgNkcmzlbzP--FzzlrtAhRaA4X4RY",
+  authDomain: "messaging-app-7f282.firebaseapp.com",
+  projectId: "messaging-app-7f282",
+  storageBucket: "messaging-app-7f282.appspot.com",
+  messagingSenderId: "263687489468",
+  appId: "1:263687489468:web:c52c1a2edf5a5d67f90db9",
+  measurementId: "G-FXHJR3SNTB"
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider };
+export default db;
